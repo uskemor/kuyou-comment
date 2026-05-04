@@ -174,6 +174,9 @@ export default function App() {
       >
         {doneMsg}
       </div>
+      <footer className={styles.footer}>
+        <small>&copy; 2026 uskemor</small>
+      </footer>
     </div>
   )
 }

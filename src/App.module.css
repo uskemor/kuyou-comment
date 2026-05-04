@@ -149,3 +149,12 @@ h1 {
   pointer-events: none;
   transition: opacity 1.2s;
 }
+
+.footer {
+  position: absolute;
+  bottom: 1.5rem;
+  font-family: "Shippori Mincho", serif;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  color: #c8bfb0;
+}
