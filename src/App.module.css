@@ -13,13 +13,21 @@ h1 {
   padding: 2rem 1rem;
   position: relative;
   overflow: hidden;
-  background: #f5f0e8;
 }
 
-@media (prefers-color-scheme: dark) {
-  .wrap {
-    background: #1a1814;
-  }
+.sky {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    #b8d8f0 0%,
+    #d4eaf8 30%,
+    #e8f4fc 55%,
+    #f0e8d0 72%,
+    #c8d8e8 85%,
+    #a8c4d8 100%
+  );
+  z-index: 0;
 }
 
 .sea {
@@ -27,8 +35,8 @@ h1 {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 160px;
-  opacity: 0.18;
+  height: 220px;
+  z-index: 1;
 }
 
 .inner {
@@ -43,15 +51,15 @@ h1 {
   font-family: "Shippori Mincho", serif;
   font-size: 11px;
   letter-spacing: 0.3em;
-  color: #a09080;
-  margin-bottom: 2rem;
+  color: #5a7a90;
+  margin-bottom: 0.5rem;
 }
 
 .privacy {
   font-family: "Shippori Mincho", serif;
   font-size: 10px;
-  letter-spacing: 0.2em;
-  color: #a09080;
+  letter-spacing: 0.15em;
+  color: #7a9aaa;
   margin-bottom: 2rem;
 }
 
@@ -63,33 +71,21 @@ h1 {
   min-height: 140px;
   background: transparent;
   border: none;
-  border-bottom: 0.5px solid #c8bfb0;
-  color: #1a1814;
+  border-bottom: 0.5px solid rgba(90, 122, 144, 0.3);
+  color: #2a4a60;
   resize: none;
   outline: none;
   text-align: center;
   padding: 0.5rem 0;
   transition: border-color 0.3s;
+  caret-color: #2a4a60;
 }
 .textarea:focus {
-  border-bottom-color: #7a6a5a;
+  border-bottom-color: rgba(90, 122, 144, 0.7);
 }
 .textarea::placeholder {
-  color: #c8bfb0;
+  color: #8aaabb;
   font-size: 14px;
-}
-
-@media (prefers-color-scheme: dark) {
-  .textarea {
-    color: #e8e0d4;
-    border-bottom-color: #3a3530;
-  }
-  .textarea:focus {
-    border-bottom-color: #7a6a5a;
-  }
-  .textarea::placeholder {
-    color: #4a4540;
-  }
 }
 
 .sendBtn {
@@ -98,8 +94,8 @@ h1 {
   font-size: 13px;
   letter-spacing: 0.2em;
   padding: 10px 36px;
-  border: 0.5px solid #c8bfb0;
-  color: #7a6a5a;
+  border: 0.5px solid rgba(90, 122, 144, 0.4);
+  color: #4a7a90;
   background: transparent;
   cursor: pointer;
   transition:
@@ -107,34 +103,21 @@ h1 {
     color 0.2s;
 }
 .sendBtn:hover:not(:disabled) {
-  border-color: #1a1814;
-  color: #1a1814;
+  border-color: #2a4a60;
+  color: #2a4a60;
 }
 .sendBtn:disabled {
   opacity: 0.3;
   cursor: default;
 }
 
-@media (prefers-color-scheme: dark) {
-  .sendBtn {
-    border-color: #3a3530;
-    color: #7a6a5a;
-  }
-  .sendBtn:hover:not(:disabled) {
-    border-color: #e8e0d4;
-    color: #e8e0d4;
-  }
-}
-
 .floatingText {
   position: absolute;
   z-index: 3;
-  left: 50%;
-  top: 50%;
   font-family: "Shippori Mincho", serif;
   font-size: 15px;
   line-height: 1.8;
-  color: #7a6a5a;
+  color: #2a4a60;
   white-space: pre-wrap;
   text-align: center;
   max-width: 340px;
@@ -150,7 +133,7 @@ h1 {
   font-family: "Shippori Mincho", serif;
   font-size: 13px;
   letter-spacing: 0.2em;
-  color: #a09080;
+  color: #5a7a90;
   text-align: center;
   max-width: 300px;
   line-height: 2;
@@ -161,8 +144,10 @@ h1 {
 .footer {
   position: absolute;
   bottom: 1.5rem;
+  z-index: 5;
   font-family: "Shippori Mincho", serif;
   font-size: 11px;
   letter-spacing: 0.15em;
-  color: #c8bfb0;
+  color: #7a9aaa;
+  opacity: 0.6;
 }
