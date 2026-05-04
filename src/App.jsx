@@ -136,7 +136,7 @@ export default function App() {
           placeholder="書いて海に流しましょう"
           maxLength={200}
         />
-        <br />
+        <p className={styles.privacy}>入力内容はサーバーに送信されません</p>
         <button
           className={styles.sendBtn}
           onClick={flow}
